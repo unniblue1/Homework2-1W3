@@ -1,12 +1,12 @@
 <?php
-require('database.php');
+/*require('database.php');
 $query = 'SELECT *
           FROM categories_guitar1
           ORDER BY categoryID';
 $statement = $db->prepare($query);
 $statement->execute();
 $categories = $statement->fetchAll();
-$statement->closeCursor();
+$statement->closeCursor();*/
 ?>
 <!DOCTYPE html>
 <html>
@@ -19,14 +19,14 @@ $statement->closeCursor();
 
 <!-- the body section -->
 <body>
-    <header><h1>Product Manager</h1></header>
+    <header><h1>Category Manager</h1></header>
 
     <main>
-        <h1>Add Product</h1>
-        <form action="add_product.php" method="post"
-              id="add_product_form">
+        <h1>Add Category</h1>
+        <form action="add_category.php" method="post"
+              id="add_category_form">
 
-            <label>Category:</label>
+           <!--  <label>Category:</label>
             <select name="category_id">
             <?php foreach ($categories as $category) : ?>
                 <option value="<?php echo $category['categoryID']; ?>">
@@ -36,18 +36,18 @@ $statement->closeCursor();
             </select><br>
 
             <label>Code:</label>
-            <input type="text" name="code"><br>
+            <input type="text" name="code"><br> -->
 
-            <label>Name:</label>
+            <label>Category Name:</label>
             <input type="text" name="name"><br>
 
-            <label>List Price:</label>
-            <input type="text" name="price"><br>
+          <!--   <label>List Price:</label>
+            <input type="text" name="price"><br> -->
 
             <label>&nbsp;</label>
-            <input type="submit" value="Add Product"><br>
+            <input type="submit" value="Add category"><br>
         </form>
-        <p><a href="index.php">View Product List</a></p>
+        <p><a href="category_list.php">View category List</a></p>
     </main>
 
     <footer>
